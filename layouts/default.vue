@@ -12,10 +12,12 @@
 
     <div class="continer mx-auto p-4">
         <slot />
+        <Analytics />
     </div>
 </template>
 
 <script setup>
+import { Analytics } from '@vercel/analytics/react';
 
 </script>
 
