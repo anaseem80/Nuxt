@@ -11,6 +11,7 @@
     </header>
 
     <div class="continer mx-auto p-4">
+        <NuxtLoadingIndicator />
         <slot />
     </div>
 </template>

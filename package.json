@@ -16,6 +16,9 @@
     "vue-router": "^4.2.5"
   },
   "dependencies": {
-    "@vercel/analytics": "^1.1.2"
+    "@pinia/nuxt": "^0.5.1",
+    "@vercel/analytics": "^1.1.2",
+    "mande": "^2.0.8",
+    "pinia": "^2.1.7"
   }
 }

@@ -1,17 +1,16 @@
 <template>
-    <div>
-        <p>Product details for {{ id }}</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque earum quo dolore commodi soluta consequatur vitae quasi facilis expedita aliquid.</p>
-    </div>
+    <div v-if="!store.loading">Loading...</div>
+    <product_details v-if="store.loading" :data="store.product"></product_details>
+    <div v-if="store.error">{{ store.error }}</div>
 </template>
 
 <script setup>
-    
-    const { id } = useRoute().params
 
-    // definePageMeta({
-    //     layout: 'products'
-    // })
+
+    const { id } = useRoute().params
+    const store = useProductStore();
+    store.GET_PRODUCT_DATA(id)
+    console.log(store)
 
 </script>
 

@@ -1,11 +1,16 @@
 <template>
+    <Head>
+        <Title>Naseem | Home</Title>
+    </Head>
     <div>
-        <h2 class="mb-5 text-4xl font-bold">Home</h2>
-        <p class="my-5 font-semibold">Lorem ipsum dolor sit amet consectetur adipisicing elit. A quisquam delectus eum, esse quos minima iure sapiente. Eveniet, incidunt deserunt!</p>
+        {{ store.getSubCategories }}
     </div>
 </template>
 
 <script setup>
+    const store = useProductsStore();
+
+    store.GET_PRODUCTS_DATA()
 
 </script>
 
